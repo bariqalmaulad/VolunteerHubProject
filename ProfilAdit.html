@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profil — Aditya Okta Nugraha </title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16302B;
+    --paper:#FAF7F0;
+    --panel:#F1ECDF;
+    --moss:#2F6F5E;
+    --amber:#C98F2B;
+    --line: rgba(22,48,43,0.14);
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Work Sans', sans-serif;
+    line-height:1.6;
+  }
+  a{ color:inherit; }
+
+  .wrap{
+    max-width:760px;
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  /* Header / Hero */
+  header.hero{
+    padding:72px 0 56px;
+    border-bottom:1px solid var(--line);
+  }
+  .hero-row{
+    display:flex;
+    align-items:center;
+    gap:28px;
+  }
+  .avatar{
+    flex:0 0 auto;
+    width:96px; height:96px;
+    border-radius:50%;
+    background: linear-gradient(160deg, var(--moss), var(--ink));
+    color:#F4EFE2;
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Fraunces', serif;
+    font-size:34px;
+    font-weight:600;
+  }
+  .hero h1{
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    font-size:40px;
+    letter-spacing:-0.01em;
+  }
+  .hero p.role{
+    margin-top:6px;
+    font-size:16px;
+    color:var(--moss);
+  }
+  .hero p.tag{
+    margin-top:14px;
+    max-width:56ch;
+    font-size:16px;
+    color:#3E4E49;
+  }
+
+  section{
+    padding:48px 0;
+    border-bottom:1px solid var(--line);
+  }
+  section:last-of-type{ border-bottom:none; }
+
+  h2{
+    font-family:'Fraunces', serif;
+    font-weight:600;
+    font-size:22px;
+    margin-bottom:18px;
+  }
+
+  /* Tentang */
+  .about p{
+    max-width:60ch;
+    font-size:16px;
+  }
+  .about p + p{ margin-top:12px; }
+
+  /* Skill & minat */
+  .chip-group{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .chip{
+    padding:8px 14px;
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:6px;
+    font-size:14px;
+  }
+
+  /* Proyek */
+  .project-card{
+    background:var(--panel);
+    border-left:3px solid var(--amber);
+    border-radius:4px;
+    padding:26px 28px;
+  }
+  .project-card h3{
+    font-family:'Fraunces', serif;
+    font-size:20px;
+    font-weight:600;
+  }
+  .project-card .subtitle{
+    color:var(--moss);
+    font-size:14px;
+    margin-top:2px;
+    margin-bottom:14px;
+  }
+  .project-card p{ font-size:15px; max-width:60ch; }
+  .project-card ul{
+    margin-top:14px;
+    padding-left:0;
+    list-style:none;
+  }
+  .project-card li{
+    font-size:14.5px;
+    padding-left:18px;
+    position:relative;
+    margin-top:8px;
+  }
+  .project-card li::before{
+    content:"—";
+    position:absolute;
+    left:0;
+    color:var(--amber);
+  }
+
+  /* Statistik ringkas gaya dashboard */
+  .stat-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:16px;
+    margin-top:22px;
+  }
+  .stat{
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:16px;
+  }
+  .stat .num{
+    font-family:'Fraunces', serif;
+    font-size:26px;
+    font-weight:700;
+    color:var(--ink);
+  }
+  .stat .label{
+    font-size:13px;
+    color:#5B6A65;
+    margin-top:2px;
+  }
+
+  /* Kontak */
+  .contact-list{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .contact-list a{
+    text-decoration:none;
+    font-size:15px;
+    border-bottom:1px solid var(--line);
+    padding-bottom:8px;
+    display:flex;
+    justify-content:space-between;
+  }
+  .contact-list a span.label{ color:#5B6A65; font-size:13px; }
+  .contact-list a:hover{ color:var(--moss); }
+
+  footer{
+    padding:32px 0 56px;
+    font-size:13px;
+    color:#7A857F;
+  }
+
+  @media (max-width:520px){
+    .hero-row{ flex-direction:column; align-items:flex-start; }
+    .hero h1{ font-size:32px; }
+    .stat-grid{ grid-template-columns:1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="hero">
+    <div class="hero-row">
+      <div class="avatar">BN</div> <!-- Ganti dengan inisial nama Anda -->
+      <div>
+        <h1>Aditya Okta Nugraha</h1>
+        <p class="role">Sistem Informasi / 2025081020</p>
+      </div>
+    </div>
+    <p class="tag">
+      Mahasiswa Pengolahan Informasi Berbasis Pemrograman Script, sedang mengembangkan
+      <strong>VolunteerHub</strong> — platform yang mempertemukan organisasi sosial dengan volunteer,
+      dari pendaftaran kegiatan sampai penerbitan sertifikat.
+    </p>
+  </header>
+
+  <section class="about">
+    <h2>Tentang Saya</h2>
+    <p>Saya adalah mahasiswa Sistem Informasi yang cukup tertarik dengan dunia teknologi,
+       terutama dalam pengembangan software. Saya suka mempelajari bagaimana sebuah aplikasi 
+       atau sistem dibuat dan bagaimana teknologi bisa digunakan untuk menyelesaikan masalah sehari-hari. 
+       Dalam tim, saya biasanya ikut berdiskusi, mengerjakan bagian yang menjadi tanggung jawab saya, 
+       dan saya membantu mengembangkan platform ini.</p>
+    <p>Selain kuliah, saya juga aktif mengikuti organisasi dan berbagai kegiatan di kampus. Dari pengalaman 
+       tersebut, saya belajar banyak tentang kerja sama, komunikasi, tanggung jawab, dan bagaimana mengatur 
+       waktu antara kuliah dan kegiatan lainnya. Pengalaman ini juga membantu saya menjadi lebih terbiasa 
+       bekerja dalam tim dan menghadapi berbagai tantangan dalam sebuah project.</p>
+  </section>
+
+  <section class="skills">
+    <h2>Skill &amp; Minat</h2>
+    <div class="chip-group">
+      <span class="chip">HTML &amp; CSS</span>
+      <span class="chip">JavaScript</span>
+      <span class="chip">Bernyanyi</span>
+      <span class="chip">Musik</span>
+    </div>
+  </section>
+
+  <section class="project">
+    <h2>Proyek Kelompok</h2>
+    <div class="project-card">
+      <h3>VolunteerHub</h3>
+      <p class="subtitle">Platform kegiatan volunteer — dari pendaftaran hingga sertifikat</p>
+      <p>
+        VolunteerHub menghubungkan organisasi sosial yang membuat kegiatan dengan volunteer yang
+        mencari kegiatan sesuai minat dan skill mereka. Setiap kontribusi tercatat rapi: mulai dari
+        pendaftaran, verifikasi, absensi, sampai penerbitan sertifikat dan riwayat kontribusi.
+      </p>
+      <ul>
+        <li>Tiga peran utama: Volunteer, Organisasi, dan Admin</li>
+        <li>Alur lengkap: daftar → diverifikasi → check-in → sertifikat → riwayat</li>
+        <li>Pencarian kegiatan berdasarkan kategori, lokasi, tanggal, durasi, dan skill</li>
+      </ul>
+      <div class="stat-grid">
+        <div class="stat">
+          <div class="num">7</div>
+          <div class="label">Objek utama sistem</div>
+        </div>
+        <div class="stat">
+          <div class="num">3</div>
+          <div class="label">Aktor / peran</div>
+        </div>
+        <div class="stat">
+          <div class="num">5+</div>
+          <div class="label">Kategori kegiatan</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Kontak</h2>
+    <div class="contact-list">
+      <a href="oktanugrahaaditya@gmail.com">Email <span class="label">oktanugrahaaditya@gmail.com</span></a>
+      <a href="oktanugrahaaditya-cmyk" target="_blank" rel="noopener">GitHub <span class="label">github.com/oktanugrahaaditya-cmyk</span></a>
+      <a href="Aditya Okta Nugraha" target="_blank" rel="noopener">LinkedIn <span class="label">linkedin.com/in/Aditya Okta Nugraha</span></a>
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>
